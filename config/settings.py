@@ -1,6 +1,6 @@
 """Global application configuration management using Pydantic Settings."""
 import os
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "ISO-IECx"
@@ -10,7 +10,6 @@ class Settings(BaseSettings):
     CHROMA_PORT: int = int(os.getenv("CHROMA_PORT", "8000"))
     API_KEY_SECRET: str = os.getenv("API_KEY_SECRET", "default-dev-secret")
 
-    class Config:
-        env_file = ".env"
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 settings = Settings()
