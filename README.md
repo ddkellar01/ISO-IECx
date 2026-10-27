@@ -33,43 +33,62 @@
 
 ## 🧰 Tech Stack Badges & Architecture
 
-![CI Pipeline](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Build Status](https://img.shields.io/badge/Build-Passing-2ea44f?style=for-the-badge&logo=github&logoColor=white)
-![Security Audit](https://img.shields.io/badge/Security-Audited-blueviolet?style=for-the-badge&logo=shield&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT%2FApache--2.0-green?style=for-the-badge)
-![Coverage](https://img.shields.io/badge/Coverage-98.4%25-brightgreen?style=for-the-badge&logo=codecov&logoColor=white)
+### 🔄 Workflow & Project Badges
+[![CI Pipeline](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/iso-iecx/core/actions)
+[![Build Status](https://img.shields.io/badge/Build-Passing-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iso-iecx/core)
+[![Security Audit](https://img.shields.io/badge/Security-Audited-blueviolet?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/iso-iecx/core)
+[![License](https://img.shields.io/badge/License-MIT%2FApache--2.0-green?style=for-the-badge)](LICENSE)
+[![Coverage](https://img.shields.io/badge/Coverage-98.4%25-brightgreen?style=for-the-badge&logo=codecov&logoColor=white)](https://codecov.io)
 
 ---
 
 ### 💻 Core Programming Languages & Core Systems
-* 🦀 **Rust**: Safe systems programming, core state machine, memory protection.
-* ⚡ **C++20**: Low-level math primitives, AVX512/NEON hardware vectorization, cryptographic routines.
-* ⚡ **Zig**: Deterministic low-level cross-compilation toolchains and custom memory allocators.
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![C++20](https://img.shields.io/badge/C%2B%2B20-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![Zig](https://img.shields.io/badge/Zig-F7A41D?style=for-the-badge&logo=zig&logoColor=white)
+
+---
 
 ### ⛓️ Web3 & Infrastructure
-* 🌐 **libp2p**: Encrypted transport, peer discovery, and stream multiplexing.
-* 🌌 **Cosmos SDK / Substrate**: Modular consensus and inter-chain communication protocols.
-* 💎 **EVM / SVM Runtimes**: Isolated smart contract execution with zero-knowledge verification hooks.
+![libp2p](https://img.shields.io/badge/libp2p-3B82F6?style=for-the-badge&logo=libp2p&logoColor=white)
+![Cosmos SDK](https://img.shields.io/badge/Cosmos_SDK-2E3148?style=for-the-badge&logo=cosmos&logoColor=white)
+![Substrate](https://img.shields.io/badge/Substrate-282828?style=for-the-badge&logo=substrate&logoColor=white)
+![EVM Runtime](https://img.shields.io/badge/EVM_Runtime-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)
+![SVM Runtime](https://img.shields.io/badge/SVM_Runtime-14F195?style=for-the-badge&logo=solana&logoColor=black)
+
+---
 
 ### ⚙️ Platform Support & Hardware Architecture
-* 🖥️ **x86_64 & ARM64**: High-performance optimization for Intel/AMD servers, Apple Silicon, and AWS Graviton.
-* 📐 **RISC-V**: Open architecture support for embedded compliance nodes and edge devices.
-* 🔒 **Trusted Execution Environments (TEE)**: Hardware enclaves via Intel SGX, AMD SEV-SNP, and AWS Nitro Enclaves.
+![x86_64](https://img.shields.io/badge/x86__64-0071C5?style=for-the-badge&logo=intel&logoColor=white)
+![ARM64](https://img.shields.io/badge/ARM64-0091BD?style=for-the-badge&logo=arm&logoColor=white)
+![RISC-V](https://img.shields.io/badge/RISC--V-000000?style=for-the-badge&logo=riscv&logoColor=white)
+![Intel SGX](https://img.shields.io/badge/Intel_SGX-0071C5?style=for-the-badge&logo=intel&logoColor=white)
+![AMD SEV-SNP](https://img.shields.io/badge/AMD_SEV--SNP-ED1C24?style=for-the-badge&logo=amd&logoColor=white)
+![AWS Nitro Enclaves](https://img.shields.io/badge/AWS_Nitro_Enclaves-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+
+---
 
 ### ⚡ Low-Level Infrastructure & Performance
-* 🐝 **eBPF**: Kernel-level runtime auditing, telemetry, and network security policies.
-* 🔄 **io_uring**: High-throughput asynchronous I/O engine for Linux system calls.
-* 🚀 **DPDK**: Direct user-space network packet processing for ultra-low latency operations.
+![eBPF](https://img.shields.io/badge/eBPF-1F2937?style=for-the-badge&logo=ebpf&logoColor=white)
+![io_uring](https://img.shields.io/badge/io__uring-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![DPDK](https://img.shields.io/badge/DPDK-FF0000?style=for-the-badge&logo=fastapi&logoColor=white)
+
+---
 
 ### 🛠️ DevOps & Build Tools
-* 📦 **Cargo & Bazel**: Multi-language, hermetic builds and reproducible binary pipelines.
-* 🐳 **Docker & Kubernetes**: Container orchestration and auto-scaling production workloads.
-* 📜 **Terraform & Ansible**: Infrastructure-as-Code (IaC) deployment management.
+![Cargo](https://img.shields.io/badge/Cargo-000000?style=for-the-badge&logo=rust&logoColor=white)
+![Bazel](https://img.shields.io/badge/Bazel-43A047?style=for-the-badge&logo=bazel&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
+
+---
 
 ### ☁️ Cloud Providers
-* 🟧 **AWS**: Amazon Web Services (EC2, KMS, EKS, Nitro Enclaves).
-* 🟦 **GCP**: Google Cloud Platform (Confidential VMs, GKE).
-* 🏢 **Bare-Metal & Hybrid**: Air-gapped enterprise infrastructure and sovereign server deployments.
+![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+![GCP](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
+![Bare Metal / Hybrid](https://img.shields.io/badge/Bare_Metal_/_Hybrid-4A5568?style=for-the-badge&logo=serverfault&logoColor=white)
 
 ---
 
@@ -116,3 +135,34 @@ Modern engineering teams often face a dilemma: choose between **fast-moving dece
 git clone [https://github.com/iso-iecx/core.git](https://github.com/iso-iecx/core.git)
 cd core
 git submodule update --init --recursive
+
+Step 2: Install System Dependencies
+Make sure Rust and necessary C/C++ compilation tools are installed on your host system:
+
+# Install Rust toolchain
+curl --proto '=https' --tlsv1.2 -sSf [https://sh.rustup.rs](https://sh.rustup.rs) | sh
+source $HOME/.cargo/env
+
+# Install OS build packages (Ubuntu/Debian)
+sudo apt-get update && sudo apt-get install -y \
+    build-essential \
+    cmake \
+    clang \
+    libclang-dev \
+    libssl-dev \
+    pkg-config
+
+Step 3: Compile the Project
+Build the node binary in release mode with optimized hardware flags:
+
+cargo build --release --all-features
+
+Step 4: Run System Tests
+Verify that all cryptographic modules and low-level drivers work on your system:
+
+cargo test --release --workspace
+
+Step 5: Launch a Local Node
+Start your local runtime node using the default configuration file:
+
+./target/release/iecx-node --config ./configs/default.toml
