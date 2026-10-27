@@ -1,13 +1,16 @@
-"""Validates software architecture configurations against ISO/IEC rules."""
 import json
+from pathlib import Path
 
 class ComplianceChecker:
-    def __init__(self, rules_path: str = "config/standards_registry.json"):
+    def __init__(self, rules_path: str = None):
+        if rules_path is None:
+            root_dir = Path(__file__).resolve().parent.parent
+            rules_path = root_dir / "config" / "standards_registry.json"
+            
         with open(rules_path, "r") as f:
             self.registry = json.load(f)
 
     def audit_config(self, config_dict: dict) -> dict:
-        """Audits input configuration against baseline ISO/IEC controls."""
         findings = []
         if not config_dict.get("encryption_at_rest", False):
             findings.append({"control": "ISO/IEC 27001", "issue": "Missing encryption at rest"})
