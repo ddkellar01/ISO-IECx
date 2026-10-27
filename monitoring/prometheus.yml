@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'iso-iecx-core'
+    static_configs:
+      - targets: ['iso-core:8080']
