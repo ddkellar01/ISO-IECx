@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  iso-redis:
+    image: redis:7-alpine
+    restart: always
+
+  iso-chromadb:
+    image: chromadb/chroma:latest
+    restart: always
+    volumes:
+      - chroma_data:/chroma/chroma
+
+  iso-core:
+    image: credkellar/iso-iecx:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - REDIS_URL=redis://iso-redis:6379/0
+      - CHROMA_HOST=iso-chromadb
+      - CHROMA_PORT=8000
+      - API_KEY_SECRET=${API_KEY_SECRET}
+    depends_on:
+      - iso-redis
+      - iso-chromadb
+
+volumes:
+  chroma_data:
