@@ -166,3 +166,70 @@ Step 5: Launch a Local Node
 Start your local runtime node using the default configuration file:
 
 ./target/release/iecx-node --config ./configs/default.toml
+
+📋 Requirements
+
+🖥️ Hardware Requirements
+🧠 CPU: x86_64 (AVX2+) or ARM64 (Apple M-Series / AWS Graviton). Intel SGX or AMD SEV-SNP required for enclave modes.
+💾 RAM: Minimum 8 GB (16 GB+ recommended for production clusters).
+💽 Storage: 50 GB NVMe SSD space.
+🛠️ Software Requirements
+🐧 OS: Linux Kernel 5.10+ (required for eBPF and io_uring) or macOS 12+.
+🔧 Toolchain:
+🦀 Rust stable (v1.75+)
+🛠️ Clang / LLVM (v15+)
+📦 CMake (v3.22+)
+
+📂 FULL Project Structure Tree
+
+iso-iecx/
+├── 📁 .github/                         # CI/CD Workflows & Repository Templates
+│   ├── 📁 workflows/
+│   │   ├── ⚙️ ci.yml                    # Automated Build & Testing
+│   │   ├── 🛡️ security-audit.yml       # Vulnerability & Dependency Scanning
+│   │   └── 🚀 release.yml             # Automated Binary Releases
+│   └── 📁 ISSUE_TEMPLATE/
+├── 📁 configs/                         # Runtime & Policy Configurations
+│   ├── 📄 default.toml                 # Local Development Configuration
+│   ├── 📄 production.toml              # Production Multi-Node Configuration
+│   └── 📄 enclave-policy.json          # Hardware Enclave Trust Parameters
+├── 📁 docs/                            # Project Documentation
+│   ├── 📖 architecture.md              # Detailed System Architecture Design
+│   ├── 📖 compliance-mapping.md        # Mapping Engine to ISO/IEC Standards
+│   └── 📖 api-reference.md             # API & RPC Endpoint Manual
+├── 📁 scripts/                         # Operational & Helper Scripts
+│   ├── 📜 setup-env.sh                 # Dependency Installer Script
+│   ├── 📜 generate-certs.sh            # Cryptographic Key Generation
+│   └── 📜 benchmark.sh                 # Performance Benchmarking Suite
+├── 📁 src/                             # Core Source Code
+│   ├── 📁 bin/
+│   │   └── 🎬 iecx-node.rs             # Application Main Entrypoint
+│   ├── 📁 core/                        # Engine State & Execution Scheduling
+│   │   ├── 📄 mod.rs
+│   │   ├── ⚙️ engine.rs
+│   │   ├── 💾 memory.rs
+│   │   └── 🗓️ scheduler.rs
+│   ├── 📁 crypto/                      # Zero-Knowledge & Cryptographic Primitives
+│   │   ├── 📄 mod.rs
+│   │   ├── 🔐 zkp.rs
+│   │   └── ⚡ primitives.cpp
+│   ├── 📁 network/                     # Peer-to-Peer & RPC Networking Layer
+│   │   ├── 📄 mod.rs
+│   │   ├── 📡 transport.rs
+│   │   └── 🌐 p2p.rs
+│   ├── 📁 compliance/                  # ISO Standard Rulesets & Provers
+│   │   ├── 📄 mod.rs
+│   │   ├── 📜 iso27001.rs              # Information Security Controls
+│   │   └── 📜 iso42001.rs              # Artificial Intelligence Governance Controls
+│   └── 📁 hardware/                    # Enclave & Hardware Driver Interfaces
+│       ├── 📄 mod.rs
+│       ├── 🔒 tee_sgx.rs
+│       └── 🛡️ sev_snp.rs
+├── 📁 tests/                           # System Test Suites
+│   ├── 🧪 integration_tests.rs         # End-to-End System Tests
+│   ├── 🧪 compliance_checks.rs          # Prover Validation Tests
+│   └── 🧪 stress_test.rs               # Load & Latency Benchmarks
+├── 📄 Cargo.toml                       # Rust Dependency & Workspace Manifest
+├── 📄 CMakeLists.txt                   # Native C/C++ Build Configuration
+├── 📄 LICENSE                          # License Terms (MIT / Apache-2.0)
+└── 📖 README.md                        # Repository Landing Page
