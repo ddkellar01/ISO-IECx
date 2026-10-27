@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Local Docker build script for ISO-IECx
+# Local Docker build helper script for ISO-IECx
 set -e
 
 IMAGE_NAME="credkellar/iso-iecx"
