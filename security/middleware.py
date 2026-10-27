@@ -1,5 +1,6 @@
 """API key validation middleware for securing ISO-IECx endpoints."""
-from fastapi import Request, HTTPException
+from fastapi import Request
+from fastapi.responses import JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 from config.settings import settings
 
@@ -10,6 +11,9 @@ class APIKeyMiddleware(BaseHTTPMiddleware):
             
         auth_header = request.headers.get("Authorization")
         if not auth_header or auth_header != f"Bearer {settings.API_KEY_SECRET}":
-            raise HTTPException(status_code=401, detail="Invalid or missing API key authorization.")
+            return JSONResponse(
+                status_code=401,
+                content={"detail": "Invalid or missing API key authorization."}
+            )
             
         return await call_next(request)
