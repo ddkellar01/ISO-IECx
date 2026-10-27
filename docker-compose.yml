@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  iso-redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  iso-chromadb:
+    image: chromadb/chroma:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+
+  iso-core:
+    build: .
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - REDIS_URL=redis://iso-redis:6379/0
+      - CHROMA_HOST=iso-chromadb
+      - CHROMA_PORT=8000
+    volumes:
+      - .:/app
+    depends_on:
+      - iso-redis
+      - iso-chromadb
+    command: uvicorn workflows.google_flow:app --host 0.0.0.0 --port 8080
+
+volumes:
+  chroma_data:
