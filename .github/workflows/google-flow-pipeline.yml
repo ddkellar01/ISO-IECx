@@ -25,6 +25,7 @@ jobs:
           
       - name: Run PyTest Suites
         env:
+          PYTHONPATH: .
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           API_KEY_SECRET: "test-secret"
         run: |
